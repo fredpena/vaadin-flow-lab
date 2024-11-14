@@ -1,0 +1,12 @@
+@import url('./main-layout.css');
+@import url('./views/gallery-view.css');    html {
+      --lumo-line-height-m: 1.4;
+      --lumo-line-height-s: 1.2;
+      --lumo-line-height-xs: 1.1;
+      --lumo-size-xl: 3rem;
+      --lumo-size-l: 2.5rem;
+      --lumo-size-m: 2rem;
+      --lumo-size-s: 1.75rem;
+      --lumo-size-xs: 1.5rem;
+
+    }

@@ -1,0 +1,13 @@
+.gallery-view ol {
+  grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+}
+
+.gallery-view li {
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color, box-shadow;
+}
+
+.gallery-view li:hover {
+  background-color: var(--lumo-base-color);
+  box-shadow: var(--lumo-box-shadow-s);
+}
