@@ -13,10 +13,11 @@
     --risk-taker-color: firebrick;
     --perfectionist-color: steelblue;
     --pioneer-color: forestgreen;
+    --border-radius: 15px;
 }
 
 @media screen and (max-width: 1400px) {
-    .responsive-layout {
+    .archetypes-stats-layout {
         flex-wrap: wrap;
     }
 }
@@ -25,82 +26,96 @@
     background: var(--collector-color);
     color: white;
     font-weight: bold;
+    border-radius: var(--border-radius);
 }
 
 .explorer-style {
     background-color: var(--explorer-color);
     color: white;
     font-weight: bold;
+    border-radius: var(--border-radius);
 }
 
 .regular-style {
     background-color: var(--regular-color);
     color: white;
     font-weight: bold;
+    border-radius: var(--border-radius);
 }
 
 .reviewer-style {
     background-color: var(--reviewer-color);
     color: black;
     font-weight: bold;
+    border-radius: var(--border-radius);
 }
 
 .compulsive-style {
     background-color: var(--compulsive-color);
     color: white;
     font-weight: bold;
+    border-radius: var(--border-radius);
 }
 
 .strategist-style {
     background-color: var(--strategist-color);
     color: white;
     font-weight: bold;
+    border-radius: var(--border-radius);
 }
 
 .socializer-style {
     background-color: var(--socializer-color);
     color: white;
     font-weight: bold;
+    border-radius: var(--border-radius);
 }
 
 .achiever-style {
     background-color: var(--achiever-color);
     color: black;
     font-weight: bold;
+    border-radius: var(--border-radius);
 }
 
 .speedrunner-style {
     background-color: var(--speedrunner-color);
     color: black;
     font-weight: bold;
+    border-radius: var(--border-radius);
 }
 
 .minimalist-style {
     background-color: var(--minimalist-color);
     color: white;
     font-weight: bold;
+    border-radius: var(--border-radius);
 }
 
 .maximizer-style {
     background-color: var(--maximizer-color);
     color: white;
     font-weight: bold;
+    border-radius: var(--border-radius);
 }
 
 .risk-taker-style {
     background-color: var(--risk-taker-color);
     color: white;
     font-weight: bold;
+    border-radius: var(--border-radius);
 }
 
 .perfectionist-style {
     background-color: var(--perfectionist-color);
     color: white;
     font-weight: bold;
+    border-radius: var(--border-radius);
 }
 
 .pioneer-style {
     background-color: var(--pioneer-color);
     color: white;
     font-weight: bold;
+    border-radius: var(--border-radius);
 }

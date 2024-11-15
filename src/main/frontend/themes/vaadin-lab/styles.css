@@ -1,12 +1,141 @@
+@import "theme-editor.css";
 @import url('./main-layout.css');
-@import url('./views/gallery-view.css');    html {
-      --lumo-line-height-m: 1.4;
-      --lumo-line-height-s: 1.2;
-      --lumo-line-height-xs: 1.1;
-      --lumo-size-xl: 3rem;
-      --lumo-size-l: 2.5rem;
-      --lumo-size-m: 2rem;
-      --lumo-size-s: 1.75rem;
-      --lumo-size-xs: 1.5rem;
+@import url('views/archetypes-stats.css');
+@import url('./views/gallery-view.css');
 
+html {
+    /* Light */
+    /* colors */
+    /* This css was inspired by the following repository*/
+    /* https://github.com/vesanieminen/figma-design-to-flow-app*/
+
+    --lumo-base-color: #F5F5F5;
+    --lumo-body-text-color: #192739f0;
+    --lumo-contrast: #192434;
+    --lumo-contrast-10pct: #1a38601a;
+    --lumo-contrast-20pct: #1c375a29;
+    --lumo-contrast-30pct: #1c345442;
+    --lumo-contrast-40pct: #1c324f61;
+    --lumo-contrast-50pct: #1c304a85;
+    --lumo-contrast-5pct: #193b670d;
+    --lumo-contrast-60pct: #1c2e4599;
+    --lumo-contrast-70pct: #1b2b41b0;
+    --lumo-contrast-80pct: #1a293dd4;
+    --lumo-contrast-90pct: #18273af0;
+    --lumo-disabled-text-color: #1c345442;
+    --lumo-error-color: #d95231;
+    --lumo-error-color-10pct: #d952311a;
+    --lumo-error-color-50pct: #d9523180;
+    --lumo-error-contrast-color: #ffffff;
+    --lumo-error-text-color: #921f18;
+    --lumo-heading-text-color: #192434;
+    --lumo-primary-color: #4a9a96;
+    --lumo-primary-color-10pct: #4a9a9621;
+    --lumo-primary-color-50pct: #4a9a96c2;
+    --lumo-primary-contrast-color: #ffffff;
+    --lumo-primary-text-color: #378184;
+    --lumo-secondary-text-color: #1b2b41b0;
+    --lumo-success-color: #158444;
+    --lumo-success-color-10pct: #1688461a;
+    --lumo-success-color-50pct: #16884680;
+    --lumo-success-contrast-color: #ffffff;
+    --lumo-success-text-color: #0a7637;
+    --lumo-tertiary-text-color: #1c304a85;
+    --lumo-user-color-0: #df0b92;
+    --lumo-user-color-1: #650acc;
+    --lumo-user-color-2: #097faa;
+    --lumo-user-color-3: #ad6200;
+    --lumo-user-color-4: #bf16f3;
+    --lumo-user-color-5: #084391;
+    --lumo-user-color-6: #078836;
+    --lumo-warning-color: #ffcc00;
+    --lumo-warning-color-10pct: #ffcc0040;
+    --lumo-warning-text-color: #985211;
+    --lumo-warnng-contrast-color: #182739f0;
+    /* numbers */
+    --lumo-border-radius-s: 0.25rem;
+    --lumo-border-radius-m: 0.5rem;
+    --lumo-border-radius-l: 1rem;
+
+    --vaadin-input-field-background: #FFF;
+    --vaadin-input-field-hover-highlight: var(--lumo-contrast-30pct);
+    --vaadin-input-field-border-width: 1px;
+    --vaadin-input-field-border-color: var(--lumo-contrast-30pct);
+    --vaadin-button-background: #FFF;
+    --vaadin-button-border: 1px solid var(--lumo-primary-color-50pct);
+
+    --light-background-color: #FFF;
+
+    --lumo-space-xxl: 48px;
+}
+
+.card-background-color {
+    background-color: var(--light-background-color);
+}
+
+vaadin-button {
+    width: 8.75rem;
+}
+
+vaadin-button:hover {
+    /*cursor: pointer;*/
+}
+
+header {
+    background-color: var(--light-background-color);
+}
+
+header nav a[highlight] {
+    background-color: rgba(255, 255, 255, 0);
+    color: var(--lumo-primary-color);
+}
+
+header nav a:hover {
+    --lumo-header-text-color: var(--lumo-primary-color-50pct);
+}
+
+header nav a[highlight] span {
+    font-weight: 600;
+}
+
+vaadin-upload::part(primary-buttons) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+vaadin-avatar {
+    border-radius: 2rem;
+    border-color: var(--lumo-user-color-3);
+}
+
+.content-max-width {
+    max-width: 862px;
+}
+
+.column-gap {
+    column-gap: 62px;
+}
+
+.mt-xxl {
+    margin-top: var(--lumo-space-xxl);
+}
+
+@media (min-width: 800px) {
+    .two-columns-when-over-800px {
+        grid-column: span 2;
     }
+}
+
+@media (min-width: 800px) {
+    .column-max-width-when-over-800px {
+        max-width: 400px;
+    }
+}
+
+@media (min-width: 600px) {
+    .flex-over-600px {
+        display: flex;
+    }
+}

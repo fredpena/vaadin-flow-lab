@@ -69,6 +69,7 @@ public class MainLayout extends AppLayout {
 
     private Footer createFooter() {
         Footer layout = new Footer();
+        layout.addClassName(LumoUtility.Padding.SMALL);
 
         return layout;
     }

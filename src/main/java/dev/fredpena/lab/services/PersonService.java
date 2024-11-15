@@ -2,11 +2,12 @@ package dev.fredpena.lab.services;
 
 import dev.fredpena.lab.data.Person;
 import dev.fredpena.lab.data.PersonRepository;
-import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 public class PersonService {
