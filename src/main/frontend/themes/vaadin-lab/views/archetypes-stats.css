@@ -1,0 +1,106 @@
+:root {
+    --collector-color: coral;
+    --explorer-color: royalblue;
+    --regular-color: dimgray;
+    --reviewer-color: gold;
+    --compulsive-color: crimson;
+    --strategist-color: darkcyan;
+    --socializer-color: mediumorchid;
+    --achiever-color: limegreen;
+    --speedrunner-color: orange;
+    --minimalist-color: lightslategray;
+    --maximizer-color: darkgoldenrod;
+    --risk-taker-color: firebrick;
+    --perfectionist-color: steelblue;
+    --pioneer-color: forestgreen;
+}
+
+@media screen and (max-width: 1400px) {
+    .responsive-layout {
+        flex-wrap: wrap;
+    }
+}
+
+.collector-style {
+    background: var(--collector-color);
+    color: white;
+    font-weight: bold;
+}
+
+.explorer-style {
+    background-color: var(--explorer-color);
+    color: white;
+    font-weight: bold;
+}
+
+.regular-style {
+    background-color: var(--regular-color);
+    color: white;
+    font-weight: bold;
+}
+
+.reviewer-style {
+    background-color: var(--reviewer-color);
+    color: black;
+    font-weight: bold;
+}
+
+.compulsive-style {
+    background-color: var(--compulsive-color);
+    color: white;
+    font-weight: bold;
+}
+
+.strategist-style {
+    background-color: var(--strategist-color);
+    color: white;
+    font-weight: bold;
+}
+
+.socializer-style {
+    background-color: var(--socializer-color);
+    color: white;
+    font-weight: bold;
+}
+
+.achiever-style {
+    background-color: var(--achiever-color);
+    color: black;
+    font-weight: bold;
+}
+
+.speedrunner-style {
+    background-color: var(--speedrunner-color);
+    color: black;
+    font-weight: bold;
+}
+
+.minimalist-style {
+    background-color: var(--minimalist-color);
+    color: white;
+    font-weight: bold;
+}
+
+.maximizer-style {
+    background-color: var(--maximizer-color);
+    color: white;
+    font-weight: bold;
+}
+
+.risk-taker-style {
+    background-color: var(--risk-taker-color);
+    color: white;
+    font-weight: bold;
+}
+
+.perfectionist-style {
+    background-color: var(--perfectionist-color);
+    color: white;
+    font-weight: bold;
+}
+
+.pioneer-style {
+    background-color: var(--pioneer-color);
+    color: white;
+    font-weight: bold;
+}
