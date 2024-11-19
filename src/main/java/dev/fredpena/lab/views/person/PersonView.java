@@ -12,7 +12,6 @@ import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Footer;
 import com.vaadin.flow.component.html.H3;
-import com.vaadin.flow.component.html.Header;
 import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
@@ -62,7 +61,7 @@ public class PersonView extends VerticalLayout {
     private final TextField firstName = new TextField("First Name", "Enter first name");
     private final TextField lastName = new TextField("Last Name", "Enter last name");
     private final TextField email = new TextField("Email", "Enter email address");
-    private final DatePicker dateOfBirth = new DatePicker("Date Of Birth");
+    private final DatePicker dateOfBirth = new DatePicker("Date of birth");
     private final TextField address = new TextField("Address", "Enter address");
     private final TextField city = new TextField("City", "Enter city");
     private final TextField state = new TextField("State", "Enter state");
@@ -99,6 +98,8 @@ public class PersonView extends VerticalLayout {
             toggleGridButton.setIcon(new Icon(grid.isVisible() ? VaadinIcon.EYE_SLASH : VaadinIcon.EYE));
             searchField.focus();
         });
+
+        dateOfBirth.setPlaceholder("Enter date of birth");
 
         searchField.setClearButtonVisible(true);
         searchField.setPrefixComponent(new Icon(VaadinIcon.SEARCH));
@@ -194,8 +195,12 @@ public class PersonView extends VerticalLayout {
 
         Footer footer = new Footer(createFooter());
 
+        VerticalLayout headerLayout = new VerticalLayout(toggleGridButton, searchField, grid, createFormLayout());
+        headerLayout.addClassNames(LumoUtility.Padding.MEDIUM, LumoUtility.Padding.Top.XSMALL, LumoUtility.Padding.Bottom.XSMALL);
+        headerLayout.setSpacing(false);
+
         Scroller formScroller = scrollerVertical();
-        formScroller.setContent(createFormLayout());
+        formScroller.setContent(headerLayout);
         formScroller.addClassNames(LumoUtility.Padding.MEDIUM);
 
         toggleGridButton.setWidthFull();
@@ -211,13 +216,7 @@ public class PersonView extends VerticalLayout {
 
 
     private VerticalLayout getVerticalLayout(Scroller formScroller, Footer footer) {
-        VerticalLayout headerLayout = new VerticalLayout(toggleGridButton, searchField, grid);
-        headerLayout.addClassNames(LumoUtility.Padding.MEDIUM, LumoUtility.Padding.Top.XSMALL, LumoUtility.Padding.Bottom.XSMALL);
-        headerLayout.setSpacing(false);
-
-        Header header = new Header(headerLayout);
-
-        VerticalLayout body = new VerticalLayout(header, formScroller, footer);
+        VerticalLayout body = new VerticalLayout(formScroller, footer);
         body.setSizeFull();
         body.setPadding(false);
         body.addClassNames(LumoUtility.BoxShadow.XSMALL, LumoUtility.BorderRadius.LARGE);
@@ -279,6 +278,7 @@ public class PersonView extends VerticalLayout {
 
 
         HorizontalLayout horizontallayout = new HorizontalLayout(formLayout, verticallayout);
+        horizontallayout.addClassNames(LumoUtility.Padding.Top.SMALL);
         horizontallayout.setWidthFull();
         horizontallayout.setFlexGrow(1, verticallayout);
         horizontallayout.addClassName("archetypes-stats-layout");
@@ -309,6 +309,7 @@ public class PersonView extends VerticalLayout {
             }
 
             binder.writeBean(this.element);
+//            personService.update(this.element);
 
             var confirmDialog = CommonUtils.saveOrUpdateDialog(() -> {
                 personService.update(this.element);

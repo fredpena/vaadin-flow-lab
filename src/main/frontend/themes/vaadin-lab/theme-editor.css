@@ -1,0 +1,15 @@
+/*
+ * This file has been created by the Vaadin Theme Editor. Please note that
+ * manual changes to individual CSS properties may be overwritten by the theme editor.
+ */
+span.gallery-view-card-span-1 {
+  font-size:var(--lumo-font-size-xl);
+  font-style:italic;
+  font-weight:bold;
+}
+
+span.gallery-view-card-span-2 {
+  font-size:var(--lumo-font-size-m);
+  font-style:italic;
+  font-weight:bold;
+}

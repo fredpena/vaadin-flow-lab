@@ -23,10 +23,14 @@ public class GalleryViewCard extends ListItem {
         div.add(image);
 
         Span header = new Span();
+        //<theme-editor-local-classname>
+        header.addClassName("gallery-view-card-span-2");
         header.addClassNames(FontSize.XLARGE, FontWeight.SEMIBOLD);
         header.setText(text);
 
         Span subtitle = new Span();
+        //<theme-editor-local-classname>
+        subtitle.addClassName("gallery-view-card-span-1");
         subtitle.addClassNames(FontSize.SMALL, TextColor.SECONDARY, LumoUtility.AlignSelf.START);
         subtitle.setText("Card subtitle");
 
